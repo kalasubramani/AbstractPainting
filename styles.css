@@ -3,7 +3,6 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode";
   color: black;
   height: 100%;
-  width: 100%;
 }
 h3 {
   margin-left: 7em;
@@ -13,16 +12,22 @@ h3 {
 .maindiv {
   width: 40%;
   height: 400px;
-  display: block;
-  margin: 10px auto 20px auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  margin: auto;
 }
 i {
   font-weight: bold;
   color: brown;
 }
 .message {
-  margin-left: 15em;
+  margin-left: 30em;
   color: #26547c;
+  margin: auto;
+  width: 50em;
 }
 .abstractSunrise {
   height: 40%;
@@ -39,7 +44,7 @@ i {
   /* to blend in the sun rise colors to sklyline */
   background-image: linear-gradient(#f2f7f8, #1cbbf0, #fab55a);
 }
-.abstractLand {
+.abstractSea {
   height: 30%;
   /* create an effect of sunshine on water */
   background: radial-gradient(
@@ -73,10 +78,18 @@ i {
   position: absolute;
   z-index: 1;
   opacity: 0.4;
+  border-radius: 2em;
+  margin: 0.2em;
 }
 /* thankyou page */
 .thankyouText {
   text-align: center;
+}
+.footer {
+  width: 99%;
+  text-align: center;
+  bottom: 2em;
+  position: absolute;
 }
 
 /* media queries for screen width 700px and less */
@@ -84,13 +97,6 @@ i {
   body {
     /* orange background for small screens */
     background-color: #fab55a;
-  }
-  /* change drawing width to be compatible with small screens */
-  .maindiv {
-    width: 40%;
-    height: 250px;
-    display: block;
-    margin: 10px auto 20px auto;
   }
   /* change display to column for smaller screens */
   .buyerSection {
@@ -112,11 +118,6 @@ i {
     margin-left: 30px;
     margin-top: 30px;
   }
-  .message {
-    margin: 2em 2em;
-    padding-right: 10px;
-    text-align: justify;
-  }
   h3 {
     margin-left: 2em;
   }
@@ -137,13 +138,6 @@ i {
     text-decoration: underline;
     margin-bottom: 0;
   }
-  /* change drawing width to be compatible with large screens */
-  .maindiv {
-    width: 40%;
-    height: 400px;
-    display: block;
-    margin: 10px auto 20px auto;
-  }
   /* change display to column for smaller screens */
   .buyerSection {
     display: flex;
@@ -152,7 +146,8 @@ i {
     margin: auto;
   }
   .message {
-    margin-left: 25em;
+    /* margin-left: 25em; */
+    padding-bottom: 2em;
   }
   #copyrightImage {
     height: 60px;
